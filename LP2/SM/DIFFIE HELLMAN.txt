@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>Diffie-Hellman Key Exchange</title>
+</head>
+<body>
+    <h2>Diffie-Hellman Key Exchange</h2>
+    <hr>
+    <script>
+
+        // Power function to return value of a ^ b mod P
+        function power(a, b, p) {
+            if (b == 1)
+                return a;
+            else
+                return ((a ** b) % p);
+        }
+
+        // Driver code
+        var P, G, a, x, b, y, ka, kb;
+
+        // Both persons will agree upon the public keys P and G
+        // A prime number P is taken
+        P = 11;
+        document.write("The value of P: " + P + "<br>");
+
+        // A primitive root for P, G is taken 
+        G = 7;
+        document.write("The value of G: " + G + "<br>");
+
+        // Alice will choose the private key a
+        // a is the chosen private key a = 4;
+        a = 4;
+        document.write("The private key a for Alice: " + a + "<br>");
+
+        // Gets the generated key
+        x = power(G, a, P);
+
+        // Bob will choose the private key b
+        // b is the chosen private key
+        b = 3;
+        document.write("The private key b for Bob: " + b + "<br>");
+
+        // Gets the generated key
+        y = power(G, b, P);
+
+        // Generating the secret key after the exchange of keys
+        ka = power(y, a, P);
+        kb = power(x, b, P);
+
+        document.write("Secret key for Alice: " + ka + "<br>");
+        document.write("Secret key for Bob: " + kb + "<br>");
+
+    </script>
+</body>
+</html>

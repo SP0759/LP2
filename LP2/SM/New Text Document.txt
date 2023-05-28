@@ -1,0 +1,25 @@
+A* AI 
+A3_AI Job Scheduling
+AES DES IS
+
+
+
+AI-
+
+BFS DFS
+A*
+Job Scheduling/prims
+N_Queen
+Chatbot
+Employee Expert system
+
+
+IS-
+
+XOR
+Transposition
+RSA
+Diffies Hellman
+MD5
+AES 
+DES 
